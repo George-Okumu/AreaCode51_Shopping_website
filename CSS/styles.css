@@ -1,6 +1,51 @@
+body {
+    font-family: "Kaushan Script", cursive;
+    background: #fff;
+}
+
+
+/* nav links */
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+.toggler-icon {
+    font-size: 2.5rem;
+    color: dark;
+}
+
+.nav-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+    color: blue;
+}
+
 .head_section {
-    background-image: url('/images/lap1.jpg');
-    background-repeat: no-repeat;
-    height: 70vh;
+    background-image: linear-gradient(red, yellow, green);
+    background-image: url('/images/lap6.jpg');
+    background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(2, 0, 0, 0.863);
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    opacity: 0.9;
+}
+
+.banner-link {
+    font-size: 1.5rem;
+    color: white;
+    border: 0.2rem solid white;
+}
+
+.banner-link:hover {
+    background: blue;
+    color: white;
 }
