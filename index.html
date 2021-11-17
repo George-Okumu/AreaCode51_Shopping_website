@@ -14,7 +14,7 @@
 
 <body>
     <!--Nav -->
-    <nav class="navbar navbar-expand-lg px-4 bg-dark">
+    <nav class="navbar navbar-expand-lg px-4 bg-dark fixed-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
           <span class="toggler-icon"><i class="fas fa-bars"></i></span>
         </button>
@@ -39,40 +39,37 @@
                 <!-- end of single info -->
                 <!-- single info -->
                 <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
-
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">My Order <i class="fas fa-shopping-cart"></i>(<span class="total-count"></span>)</button></div>
-            </div>
-            <!-- Modal uses bootstrap js cdn -->
-            <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <table class="show-cart table">
-
-                            </table>
-                            <div>Total price: Ksh <span class="total-cart"></span></div>
-                        </div>
-                        <div class="modal-footer">
-                            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                            <a href="#order">Continue Shopping</a>
-                            <a href="#checkout">CheckOut</a>
-                            <button class="clear-cart btn btn-danger">Clear Cart</button>
-                        </div>
-                    </div>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">My Order <i class="fas fa-shopping-cart"></i>(<span class="total-count"></span>)</button>
                 </div>
             </div>
         </div>
-        </div>
     </nav>
+    <!--Modal for cart-->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">My Favorites Orders</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                    <div>Total price: $ <span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary"><a href="#checkout" class="text-light">CheckOut</a></button>
+                    <button class="clear-cart btn btn-danger">Clear Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Start of header-->
     <header class="head_section">
-        <h1 class="text-center pt-4 text-light">Welcome to Area Code 51 store</h1>
         <div class="text-center">
+            <h1 class="pt-4 text-light">Welcome to Area Code 51 store</h1>
             <h1 class="pt-4 text-light">Area code 51 sells the best and high quality laptops.</h1>
             <div class="pt-4">
                 <a href="#order" class="btn banner-link text-uppercase my-2">Purchase Now</a>
@@ -172,6 +169,7 @@
 
             </div>
         </div>
+        <!--Items-->
         <div class="container max-auto pt-4" id="order">
             <h2 class="text-center font-weight-bold">Order Now</h2>
             <div class="row">
@@ -180,9 +178,9 @@
                     <div class="card" style="width: 18rem;">
                         <img src="./images/lap2.jpg">
                         <div class="card-body text-dark text-center">
-                            <h5 class="card-title">Touch pad 2</h5>
-                            <h5 class="font-italic">Price $54</h5>
-                            <a href="#" class="btn btn-primary">Add to cart</a>
+                            <h5 class="card-title">Touch pad 1</h5>
+                            <h5 class="font-italic">Price $500</h5>
+                            <a href="" data-name="Touch-pad" data-price="500" class="add-to-cart btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -192,8 +190,8 @@
                         <img src="./images/lap1.jpg">
                         <div class="card-body text-dark text-center">
                             <h5 class="card-title">Touch pad 2</h5>
-                            <h5 class="font-italic">Price $54</h5>
-                            <a href="#" class="btn btn-primary">Add to cart</a>
+                            <h5 class="font-italic">Price $540</h5>
+                            <a href="" data-name="Touch-pad-2" data-price="540" class="add-to-cart btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -203,8 +201,8 @@
                         <img src="./images/lap3.jpg">
                         <div class="card-body text-dark text-center">
                             <h5 class="card-title">HP icore 5</h5>
-                            <h5 class="font-italic">Price $50</h5>
-                            <a href="#" class="btn btn-primary">Add to cart</a>
+                            <h5 class="font-italic">Price $700</h5>
+                            <a href="" data-name="Hp-icore-7" data-price="700" class="add-to-cart btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -225,6 +223,7 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./Js/main.js"></script>
 </body>
 
 </html>
